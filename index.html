@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-">
+    <meta http-equiv="-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="Week11.css">
+    <script src="Week11.js"></script>
+    <title>Tic Tac Toe</title>
+    <style>
+        div {
+            border-style: solid;
+            border-color: aquamarine;
+            padding: px;
+            margin: 3px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="constainer-fluid">
+    <h1><center>Game of Tic Tac Toe</center></h1>
+    <div class="board" id="board">
+        <div data-index="1" class="tile right-border bottom-border"></div>
+        <div data-index="2" class="tile right-border bottom-border"></div>
+        <div data-index="3" class="tile bottom-border"></div>
+        <div data-index="4" class="tile right-border bottom-border"></div>
+        <div data-index="5" class="tile right-border bottom-border"></div>
+        <div data-index="6" class="tile bottom-border"></div>
+        <div data-index="7" class="tile right-border"></div>
+        <div data-index="8" class="tile right-border"></div>
+        <div data-index="9" class="tile"></div>
+        <div id="strike" class="strike"></div>
+    </div>
+<div id="game-over-area" class="hidden">
+    <h2 id="game-over-text">Winner is !</h2>
+</div>
+       
+    </div>
+    
+    <button class="btn btn-success">Play Again</button>
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/boostrap.bundle.js"></script>
+</body>
+</html>
