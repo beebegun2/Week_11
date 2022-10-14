@@ -20,14 +20,14 @@ const clickSound = new Audio("click.wav");
 tiles.forEach((tile) => tile.addEventListener("click", tileClick));
 
 function setHoverText() {
-  //remove all hover text
+//remove all hover text
   tiles.forEach((tile) => {
     tile.classList.remove("x-hover");
     tile.classList.remove("o-hover");
   });
 
-  const hoverClass = `${turn.toLowerCase()}-hover`;
-
+const hoverClass = `${turn.toLowerCase()}-hover`;
+//create the hover text
   tiles.forEach((tile) => {
     if (tile.innerText == "") {
       tile.classList.add(hoverClass);
@@ -66,7 +66,7 @@ function tileClick(event) {
 function checkWinner() {
   //Check for a winner
   for (const winningCombination of winningCombinations) {
-    //Object Destructuring
+
     const { combo, strikeClass } = winningCombination;
     const tileValue1 = boardState[combo[0] - 1];
     const tileValue2 = boardState[combo[1] - 1];
@@ -89,7 +89,7 @@ function checkWinner() {
     gameOverScreen(null);
   }
 }
-
+//create function to display winner is 
 function gameOverScreen(winnerText) {
   let text = "Draw!";
   if (winnerText != null) {
@@ -109,6 +109,7 @@ function startNewGame() {
   setHoverText();
 }
 
+//create different combinations for the strikethrough
 const winningCombinations = [
   //rows
   { combo: [1, 2, 3], strikeClass: "strike-row-1" },
